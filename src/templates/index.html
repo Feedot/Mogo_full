@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link lang="de">
+        <title>MoGo</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="./css/styles.css">
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('a[ref^="#"]').click(function () {
+                    elementClick = $(this).attr("ref");
+                    destination = $(elementClick).offset().top;
+                    $('body').animate( { scrollTop: destination }, 400 );
+                    $('html').animate( { scrollTop: destination }, 400 );
+                    return false;
+                });
+            });
+        </script>
+        <script type="text/javascript" src="./js/main.js"></script>
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyBXmsAGOQq-lE3OgK6825V6iRCDvqV6I&callback=initMap">
+        </script>
+    </head>
+<body>
+    <div id="toUp" class="to_up active">
+        <a ref="#home">
+            <img src="../img/up.png"><span>Go up</span>
+        </a>
+    </div>
+    <section id="home" class="home_page">
+        <header>
+            <h1>MoGo</h1>
+            <ul>
+                <li><a ref="#about">About</a></li>
+                <li><a ref="#services">Service</a></li>
+                <li><a ref="#work">Work</a></li>
+                <li><a ref="#blog">Blog</a></li>
+                <li><a ref="#contacts">Contact</a></li>
+            </ul>
+            <ul id="ulMob" class="mob">
+                <li><a ref="#about">About</a></li>
+                <li><a ref="#services">Service</a></li>
+                <li><a ref="#work">Work</a></li>
+                <li><a ref="#blog">Blog</a></li>
+                <li><a ref="#contacts">Contact</a></li>
+            </ul>
+            <input class="search" type="text" >
+            <button id="openMenu" class="">
+                <span></span>
+            </button>
+        </header>
+        <div class="">
+            <h2>Creative Template</h2>
+            <h1>Welcome</br> to MoGo</h1>
+            <a class="learn" ref="#work">LEARN MORE</a>
+            <span></span>
+        </div>
+        <ul class="floor">
+            <li><span>01</span> INTRO</li>
+            <li><span>02</span> WORK</li>
+            <li><span>03</span> ABOUT</li>
+            <li><span>04</span> CONTACTS</li>
+        </ul>
+    </section>
+    <section id="about" class="about_us">
+        <hgroup>
+            <h4>What we do</h4>
+            <h2>Story about us</h2>
+        </hgroup>
+        <p class="under_hgroup">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <div class="images">
+            <div><img src="../img/second_1.jpg" alt=""></div>
+            <div><img src="../img/about_us_2.jpg" alt=""></div>
+            <div><img src="../img/about_ua_3.jpg" alt=""></div>
+        </div>
+        <ul>
+            <li class="one">42</br><span>Web Design Projects</span></li>
+            <li class="two">123</br><span>happy client</span></li>
+            <li class="three">15</br><span>award winner</span></li>
+            <li class="four">99</br><span>cup of coffee</span></li>
+            <li class="five">24</br><span>cup of coffee</span></li>
+        </ul>
+    </section>
+    <section id="services" class="services">
+        <hgroup >
+            <h4>What work with</h4>
+            <h2>Amazing Services</h2>
+        </hgroup>
+        <article class="">
+            <div>
+                <figure><img src="../img/alarm.png" alt=""><h2>Photography</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p></figure>
+                <figure><img src="../img/line_graph.png" alt=""><h2>Web Design</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p></figure>
+                <figure><img src="../img/computer.png" alt=""><h2>Creativity</h2><p>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p></figure>
+            </div>
+            <div>
+                <figure><img src="../img/book_2.png" alt=""><h2>seo</h2><p>Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p></figure>
+                <figure><img src="../img/house.png" alt=""><h2>Css/Html</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p></figure>
+                <figure><img src="../img/digital.png" alt=""><h2>digital</h2><p>Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p></figure>
+            </div>
+            </article>
+        <div class="iphone_ipad">
+            <hgroup >
+                <h4>For all devices</h4>
+                <h2>Unique design</h2>
+            </hgroup>
+            <img src="../img/iphone_ipad.png">
+        </div>
+        <div class="article_with_information">
+            <hgroup>
+                <h4>For all devices</h4>
+                <h2>Unique design</h2>
+            </hgroup>
+            <p class="under_hgroup">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <div class="article">
+                <img class="boy" src="../img/boy.jpg" alt="">
+                <aside>
+                    <div class="">
+                        <p><img src="../img/quarter_mount.png"><span>Photography</span></p>
+                        <div>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                        <!--<img src="../img/down.png" class="arrow down"><img src="../img/up.png" class="arrow up">-->
+                    </div>
+                    <div class="">
+                        <p><img src="../img/equalizer.png"><span>creativity</span></p>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                        <!--<img src="../img/down.png" class="arrow down"><img src="../img/up.png" class="arrow up">-->
+                    </div>
+                    <div>
+                        <p><img src="../img/bullseye.png"><span>web design</span> </p>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                        <!--<img src="../img/down.png" class="arrow down"><img src="../img/up.png" class="arrow up">-->
+                    </div>
+                </aside>
+            </div>
+            <div id="locations" class="carousel slide slider" data-interval="3000" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <figure class="sliderr slide1">
+                            <img src="../img/speech.png" alt="">
+                            <div>
+                                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                                </p>
+                                <p class="jon">Jon Doe</p>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="item">
+                        <figure class="sliderr slide2">
+                            <img src="../img/speech.png" alt="">
+                            <div>
+                                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                                </p>
+                                <p class="jon">Jon Doe</p>
+                            </div>
+                        </figure>
+                    </div>
+                    <div class="item">
+                        <figure class="sliderr slide3">
+                            <img src="../img/speech.png" alt="">
+                            <div>
+                                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                                </p>
+                                <p class="jon">Jon Doe</p>
+                            </div>
+                        </figure>
+                    </div>
+                    <a href="#locations" id="rev" data-slide="prev"><img src="../img/rev.png" alt=""></a>
+                    <a href="#locations" id="nor" data-slide="next"><img src="../img/nor.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="who_are_we">
+            <hgroup>
+                <h4>Who we are</h4>
+                <h2>Meet our team</h2>
+            </hgroup>
+            <p class="under_hgroup">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <div class="article_employee">
+                <figure>
+                    <div>
+                        <div class="img_wrapper designer">
+                            <!--<img src="../img/designer.jpg" alt="">-->
+                            <div class="opacity">
+                                <div class="icons">
+                                    <a href="https://www.facebook.com" target="_blank" class="face"></a>
+                                    <a href="https://twitter.com" target="_blank" class="twit"></a>
+                                    <a href="https://www.pinterest.com" target="_blank" class="pit"></a>
+                                    <a href="https://www.instagram.com/" target="_blank" class="inst"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Matthew Dix</p>
+                    <span>Graphic Design</span>
+                </figure>
+                <figure>
+                    <div>
+                        <div class="img_wrapper photog">
+                            <!--<img src="../img/fotographer.jpg" alt="">-->
+                            <div class="opacity">
+                                <div class="icons">
+                                    <a href="https://www.facebook.com" target="_blank" class="face"></a>
+                                    <a href="https://twitter.com" target="_blank" class="twit"></a>
+                                    <a href="https://www.pinterest.com" target="_blank" class="pit"></a>
+                                    <a href="https://www.instagram.com/" target="_blank" class="inst"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Christopher Campbell</p>
+                    <span>Branding/UX design</span>
+                </figure>
+                <figure>
+                    <div>
+                        <div class="img_wrapper develop">
+                            <!--<img src="../img/developer.jpg" alt="">-->
+                            <div class="opacity">
+                                <div class="icons">
+                                    <a href="https://www.facebook.com" target="_blank" class="face"></a>
+                                    <a href="https://twitter.com" target="_blank" class="twit"></a>
+                                    <a href="https://www.pinterest.com" target="_blank" class="pit"></a>
+                                    <a href="https://www.instagram.com" target="_blank" class="inst"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Michael Fertig </p>
+                    <span>Developer</span>
+                </figure>
+            </div>
+            <img class="logos" src="../img/logos.jpg" alt="">
+        </div>
+    </section>
+    <section id="work" class="work">
+        <hgroup>
+            <h4>What we do</h4>
+            <h2>Some of our work</h2>
+        </hgroup>
+        <p class="under_hgroup">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <article>
+            <figure>
+                <img src="../img/men.jpg" alt="">
+                <img src="../img/bridge.jpg" alt="">
+            </figure>
+            <figure>
+                <img src="../img/i_dont_know.jpg" alt="">
+                <img src="../img/cr_disgn.jpg" alt="">
+            </figure>
+            <figure>
+                <img src="../img/medusa.jpg" alt="">
+            </figure>
+            <figure>
+                <img src="../img/light.jpg" alt="">
+                <img src="../img/high_building.jpg" alt="">
+            </figure>
+        </article>
+        <div id="locations_2" class="carousel slide slider" data-interval="3000" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <figure class="slide slide1">
+                        <img src="../img/slide_men.jpg" alt="">
+                        <div>
+                            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                            </p>
+                            <p class="jon">Joshua Earle</p>
+                        </div>
+                    </figure>
+                </div>
+                <div class="item">
+                    <figure class="slide slide2">
+                        <img src="../img/slide_men.jpg" alt="">
+                        <div>
+                            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+                            <p class="jon">Joshua Earle</p>
+                        </div>
+                    </figure>
+                </div>
+                <div class="item">
+                    <figure class="slide slide3">
+                        <img src="../img/slide_men.jpg" alt="">
+                        <div>
+                            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                            </p>
+                            <p class="jon">Joshua Earle</p>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+            <a href="#locations_2" id="nor2" data-slide="next"><img src="../img/nor.png" alt=""></a>
+            <a href="#locations_2" id="rev2" data-slide="prev" ><img src="../img/rev.png" alt=""></a>
+        </div>
+        <div class="happy_clients">
+            <hgroup>
+                <h4>Happy Clients</h4>
+                <h2>What people say</h2>
+            </hgroup>
+            <div class="clients">
+                <div>
+                    <figure>
+                        <img src="../img/face_1.png">
+                        <p class="name">Matthew Dix</p>
+                        <p class="ocup">Graphic Design</p>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+                    </figure>
+                    <figure>
+                        <img src="../img/face_2.png">
+                        <p class="name">Nick Karvounis</p>
+                        <p class="ocup">Graphic Design</p>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+                    </figure>
+                </div>
+                <div>
+                    <figure>
+                        <img src="../img/face_3.png">
+                        <p class="name">Jaelynn Castillo </p>
+                        <p class="ocup">Graphic Design</p>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+                    </figure>
+                    <figure>
+                        <img src="../img/face_4.png">
+                        <p class="name">Mike Petrucci</p>
+                        <p class="ocup">Graphic Design</p>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="blog" class="blog">
+        <hgroup>
+            <h4>Happy Clients</h4>
+            <h2>What people say</h2>
+        </hgroup>
+        <article>
+            <figure>
+                <div>
+                    <div class="with_img girl">
+                        <p class="data">
+                            <span class="num">15</span>
+                            <span class="tex">Jan</span>
+                        </p>
+                    </div>
+                    <p class="name">Lorem ipsum dolor sit amet</p>
+                    <p class="text">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p class="statistics"><img src="../img/view.png" alt=""><span>542</span><img class="sp"  src="../img/speech_2.png" alt=""><span>27</span></p>
+                </div>
+            </figure>
+            <figure>
+                <div>
+                    <div class="with_img lep">
+                        <p class="data">
+                            <span class="num">14</span>
+                            <span class="tex">Jan</span>
+                        </p>
+                    </div>
+                    <p class="name">sed do eiusmod tempor</p>
+                    <p class="text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p class="statistics"><img src="../img/view.png" alt=""><span>992</span><img class="sp" src="../img/speech_2.png" alt=""><span>42</span></p>
+                </div>
+            </figure>
+            <figure>
+                <div>
+                    <div class="with_img boy">
+                        <p class="data">
+                            <span class="num">12</span>
+                            <span class="tex">Jan</span>
+                        </p>
+                    </div>
+                    <p class="name">incididunt ut labore et dolore</p>
+                    <p class="text">Elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p class="statistics"><img src="../img/view.png" alt=""><span>1560</span><img class="sp"  src="../img/speech_2.png" alt=""><span>98</span></p>
+                </div>
+            </figure>
+        </article>
+    </section>
+    <section class="map">
+        <div id="map">
+        </div>
+        <div id="openMap" class="open_map">
+            <div class="open_map_wrapper">
+                <div></div>
+                <p>Open map</p>
+            </div>
+            <p id="closeMap" class="close_map">CLOSE</br>MAP</p>
+        </div>
+    </section>
+    <section class="contacts">
+        <div class="cont_wrap">
+            <div id="contacts">
+            </div>
+        </div>
+        <div class="art mogo">
+            <h1>MoGo</h1>
+            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+            <p class="count"><span>15k</span> followers</p>
+            <p class="links">Follow Us:
+                <a href="https://www.facebook.com" class="face" target="_blank"></a>
+                <a href="https://twitter.com" class="twit" target="_blank"></a>
+                <a href="https://www.instagram.com" class="inst" target="_blank"></a>
+                <a href="https://www.pinterest.com" class="pint" target="_blank"></a>
+                <a href="https://www.google.com" class="goog" target="_blank"></a>
+                <a href="https://www.youtube.com" class="you" target="_blank"></a>
+                <a href="https://dribbble.com" class="drib" target="_blank"></a>
+                <a href="https://www.tumblr.com" class="timblr" target="_blank"></a>
+            </p>
+            <form action="" method="">
+                <input type="email" placeholder="Your Email" required><input id="button" type="submit" value="subscribe" >
+            </form>
+        </div>
+        <div class="art blogs">
+            <h1 class="bl_inst">blogs</h1>
+            <figure>
+                <img src="../img/blogs_1.jpg" alt="">
+                <p>Lorem ipsum dolor sit amet.</br> consectetur adipiscing</p>
+                <span>Jan 9, 2016</span>
+            </figure>
+            <figure>
+                <img src="../img/blogs_2.jpg" alt="">
+                <p>Consectetur adipiscing elit.</br> sed do eiusmod tempor</p>
+                <span>Jan 9, 2016</span>
+            </figure>
+            <figure>
+                <img src="../img/blogs_3.jpg" alt="">
+                <p>sed do eiusmod tempor</br> incididunt ut labore</p>
+                <span>Jan 9, 2016</span>
+            </figure>
+        </div>
+        <div class="art instagram">
+            <h1 class="bl_inst">instagram</h1>
+            <div>
+              <img src="../img/inst_1.jpg" alt="">
+              <img src="../img/inst_2.jpg" alt="">
+              <img src="../img/inst3.jpg" alt="">
+              <img src="../img/inst_4.jpg" alt="">
+              <img src="../img/inst_5.jpg" alt="">
+              <img src="../img/inst_6.jpg" alt="">
+              <img src="../img/inst_7.jpg" alt="">
+              <img src="../img/inst_8.jpg" alt="">
+              <img src="../img/inst_9.jpg" alt="">
+            </div>
+            <p>View more photos</p>
+        </div>
+    </section>
+    <footer>© 2016 MoGo free PSD template by <span>Laaqiq</span></footer>
+</body>
+</html>

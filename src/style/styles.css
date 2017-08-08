@@ -1,0 +1,1991 @@
+@font-face {
+    font-family:Montserrat-Bold ;
+    src: url(../fonts/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family:Roboto-LightItalic ;
+    src: url(../fonts/Roboto-LightItalic.ttf);
+}
+@font-face {
+    font-family:Roboto-Bold ;
+    src: url(../fonts/Roboto-Bold.ttf);
+}
+a:hover{
+    text-decoration: none;
+}
+body{
+    margin: 0px;
+}
+.to_up{
+    position: fixed;
+    background: transparent;
+    width: 100px;
+    height: 100%;
+    display: table-cell;
+    z-index: 8;
+    text-align: center;
+    padding-top: 10px;
+}
+.to_up.active{
+    display: none;
+}
+.to_up a{
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    padding-top: 10px;
+    z-index: 9;
+    text-decoration: none;
+}
+.to_up img{
+    width: 20px;
+    margin-right: 10px;
+}
+.to_up span{
+    color: #cccccc;
+}
+.to_up:hover{
+    background: rgba(204,204,204,.3);
+    cursor: pointer;
+}
+header{
+    position: relative;
+    width: 100%;
+    height: 80px;
+    background: transparent;
+    color: white;
+    z-index: 10;
+
+}
+header.active{
+    position: fixed;
+    z-index: 10;
+    height: 100%;
+    top: 0px;
+}
+header h1{
+    font-size: 30px;
+    /*color: rgb(255, 255, 255);*/
+    float: left;
+    padding-left: 18%;
+    font-family: "Montserrat";
+    font-weight: bold;
+}
+header ul{
+    margin-top: 0px;
+    padding-top: 30px;
+    list-style: none;
+    text-align: right;
+    padding-right: 200px;
+    word-spacing: 25px;
+    font-size: 14px;
+    font-family: "Montserrat";
+    /*color: rgb(255, 255, 255);*/
+    text-transform: uppercase;
+}
+header ul.mob{
+    display: none;
+}
+header ul li {
+    display: inline-block;
+}
+header ul li a{
+    text-decoration: none;
+    color: white;
+    padding-bottom:10px;
+    border-bottom: 2px solid white;
+}
+header ul li a:hover{
+    color: #fce38a;
+    border-color:#fce38a;
+    cursor: pointer;
+}
+header input{
+    position: absolute;
+    top:32px;
+    right: 30px;
+    padding: 5px;
+    background: url("../img/MAGNIFYING GLASS.png") no-repeat;
+    background-position: 5px center;
+    border:none;
+    outline: none;
+    text-indent: 20px;
+    color: white;
+    font-size:14px;
+    cursor: pointer;
+}
+header.active input{
+    display: block;
+}
+header input:hover{
+  border: 2px solid white;
+    top:30px;
+    right: 28px;
+
+}
+header input:focus{
+    border: 2px solid white;
+    top:30px;
+    right: 28px;
+
+}
+header button{
+    -webkit-appearance: none;
+    position: absolute;
+    top:20px;
+    width: 30px;
+    height: 30px;
+    outline: none;
+    background:transparent;
+    border: none;
+    right: 50px;
+    display: none;
+    transition: all .3s;
+    cursor: pointer;
+}
+header button:after{
+    content: '';
+    height: 4px;
+    width: 30px;
+    background: white;
+    border: 1px solid white;
+    position: absolute;
+    left: 0px;
+    top: 3px;
+    border-radius: 10px;
+    transition: all .3s;
+}
+header button:before{
+    content: '';
+    height: 4px;
+    width: 30px;
+    background: white;
+    border: 1px solid white;
+    position: absolute;
+    bottom: 2px;
+    right: 0px;
+    border-radius: 10px;
+    transition: all .3s;
+}
+header button span{
+    height: 30px;
+    width: 4px;
+    background: white;
+    border: 1px solid white;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 0px;
+    left: 13px;
+    border-radius: 10px;
+
+}
+header button.active{
+    top:20px;
+    right:28px;
+}
+header button.active span{
+    display: none;
+}
+header button.active:after{
+    /*transition: none;*/
+    transform: translateY(10px) rotate(45deg);
+}
+header button.active:before{
+    transform: translateY(-11px) rotate(-45deg);
+    /*transition: none;*/
+}
+.home_page{
+    position: relative;
+    background: url("../img/birdBack.jpg");
+    background-size:cover;
+    height: 100%;
+    text-align: center;
+    width: 100%;
+}
+.home_page div{
+    margin-top: 100px;
+    text-align: center;
+    line-height:1;
+    margin-bottom: 150px;
+    padding-top: 0px;
+}
+.home_page div.active {
+    margin-top: -25px;
+    padding-top: 100px;
+}
+.home_page div h2{
+    font-size: 58px;
+    font-family: 'Kaushan Script', cursive;
+    color: white;
+    margin-bottom: 30px;
+}
+.home_page div h1{
+    font-size: 120px;
+    font-family: "Montserrat-Bold";
+    color: rgb(255, 255, 255);
+    margin: 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+    position: relative;
+    margin-bottom: 100px;
+
+}
+.home_page div a{
+    padding:8px 25px;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    font-family: "Montserrat";
+    font-weight: bold;
+    text-transform: uppercase;
+    background: transparent;
+    border: 2px solid white;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+.home_page div a:hover{
+    background-color: rgba(252, 227, 138,.3);
+
+}
+.home_page div a:after{
+    content: '';
+    width: 40px;
+    background: white;
+    height: 2px;
+    position: absolute;
+    left: 50px;
+    top:-60px;
+}
+.home_page ul.floor{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+    word-spacing: 15px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.home_page ul.floor li {
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    padding-top:20px;
+    border-top: 2px solid white;
+    width: 240px;
+    word-spacing: 5px;
+    font-family: "Montserrat";
+    padding-bottom: 20px;
+    position: relative;
+}
+.home_page ul.floor li:after{
+    content: '';
+    width: 70px;
+    background: #f38181;
+    height: 2px;
+    position: absolute;
+    top:-2px;
+    left: 0px;
+}
+.home_page ul.floor li span{
+    font-size: 24px;
+}
+hgroup{
+    text-align: center;
+    padding-top: 80px;
+    position: relative;
+}
+hgroup *{
+    margin: 0;
+}
+hgroup h4{
+    font-size: 24px;
+    font-family: "Kaushan Script";
+    color: rgb(51, 51, 51);
+}
+hgroup h2{
+    font-size: 30px;
+    font-family: "Montserrat";
+    color: rgb(51, 51, 51);
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+}
+hgroup:after {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 2px;
+    background-color: #f38181;
+    top: 200px;
+    right: 50%;
+    transform: translate(55%,-50%);
+}
+.about_us{
+    text-align: center;
+}
+.about_us p.under_hgroup, .services .article_with_information p.under_hgroup, .services .who_are_we p.under_hgroup,.work p.under_hgroup{
+    margin-top: 100px;
+    display: inline-block;
+    width: 68%;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(153, 153, 153);
+}
+.about_us div.images{
+    display: inline-block;
+    margin-top: 100px;
+}
+.about_us div.images div{
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: #95e1d3;
+}
+.about_us div.images img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+.about_us div.images img:hover{
+    top:-10px;
+    left: -10px;
+}
+.about_us ul{
+    margin-top:80px;
+    margin-bottom: 80px;
+    list-style: none;
+    background-color: #95e1d3;
+    word-spacing: 80px;
+    padding: 0px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+.about_us ul li {
+    font-size: 72px;
+    display: inline-block;
+    color: white;
+    font-family: "Montserrat";
+    font-weight: bold;
+    position: relative;
+    line-height: 40px;
+}
+.about_us ul li span{
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    word-spacing: 5px;
+}
+.services{
+    text-align: center;
+}
+.services article{
+    margin-top: 100px;
+    display: inline-block;
+    width: 1000px;
+    margin-bottom: 80px;
+}
+.services article div{
+    text-align: left;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+.services article div:last-child{
+    border-top:2px solid #e5e5e5 ;
+}
+.services article figure{
+    margin: 0px;
+    width: 33%;
+    display: inline-block;
+    vertical-align: top;
+}
+.services article figure img{
+    width: 32px;
+    height: 32px;
+    float: left;
+}
+.services article figure h2{
+    margin: 0px;
+    padding-left: 50px;
+    font-size: 15px;
+    font-family: "Montserrat";
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+}
+.services article figure p{
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgb(153, 153, 153);
+    font-family:"Roboto" ;
+    padding-left: 50px;
+}
+.services .iphone_ipad{
+    background:url("../img/nature.jpg") no-repeat;
+}
+.services .iphone_ipad img{
+    margin-top: 116px;
+}
+.services .article_with_information {
+    position: relative;
+}
+.services .article_with_information img.boy{
+    width: 475px;
+    float: left;
+}
+.services .article_with_information aside{
+    display: table;
+    width: 49%;
+}
+.services .article_with_information aside div{
+    text-align: left;
+    display: block;
+    transition: all 1s;
+    height: 56px;
+}
+.services .article_with_information div.article{
+    margin-top: 80px;
+    display: inline-block;
+    width: 1000px;
+    margin-bottom: 80px;
+}
+.services .article_with_information div.article aside{
+    padding-left: 30px;
+}
+.services .article_with_information aside div{
+    position: relative;
+    border: 1px solid #e5e5e5;
+    border-bottom: none;
+    margin-bottom:10px;
+    padding-right: 20px;
+    transition: all 0.5s;
+    z-index: 2;
+}
+.services .article_with_information aside div.active{
+    height: 180px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.services .article_with_information aside div.active div{
+    height:100px;
+    overflow: scroll;
+    padding: 10px;
+    border: none;
+    overflow-x: hidden;
+    font-size: 15px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.services .article_with_information aside div.active div::-webkit-scrollbar{
+    background: #f5f5f5;
+    width: 3px;
+    /*position: absolute;*/
+    right: 20px;
+}
+.services .article_with_information aside div.active div::-webkit-scrollbar-thumb{
+    background: #95e1d3;
+    width: 4px;
+    border-radius: 10px;
+}
+.services .article_with_information aside div p img{
+    height: 32px;
+}
+.services .article_with_information aside div p{
+    position: relative;
+    margin: 0px;
+    font-size: 15px;
+    font-family: "Montserrat";
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+    border-bottom:1px solid #e5e5e5;
+    cursor: pointer;
+    background: url("../img/down.png") no-repeat;
+    background-position: right 20px center;
+    padding: 12px;
+    width: 105%;
+    margin-top: -1px;
+}
+
+.services .article_with_information aside div.active p{
+    background: url("../img/up.png") no-repeat;
+    background-position: right 20px center;
+}
+.services .article_with_information aside div p:hover{
+    background-color: #e5e5e5;
+}
+.services .article_with_information aside div p img{
+    padding-right: 10px;
+}
+.services .article_with_information aside div p span{
+    vertical-align: middle;
+}
+.services .article_with_information aside div div{
+    height: 0px;
+    font-family: "Roboto";
+    color: rgb(153, 153, 153);
+    font-style: italic;
+    line-height: 1.6;
+    overflow: hidden;
+    border: none;
+}
+.slider{
+    margin: auto;
+    position: relative;
+    width: 100%;
+    height: 116px;
+    overflow: hidden;
+}
+.slider .item{
+    text-align: center;
+}
+.slider figure{
+    width: 750px;
+    height:116px;
+    top: 0px;
+    left: 0px;
+    margin: auto;
+    text-align: left;
+
+}
+.slider figure div{
+    margin: auto;
+}
+.slider figure p{
+    font-size: 18px;
+    color: rgb(153, 153, 153);
+    line-height: 1.5;
+    font-style: italic;
+    margin: 0px;
+    margin-left: 140px;
+    width: 620px;
+}
+.slider figure p.jon {
+    font-size: 18px;
+    color: rgb(51, 51, 51);
+    line-height: 1.2;
+    font-family: "Kaushan Script";
+    position: relative;
+    margin-top: 15px;
+    margin-left: 200px;
+    width: auto;
+}
+.slider figure p.jon:before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: #f38181;
+    left: -60px;
+    top: 10px;
+}
+
+.slider figure img{
+    padding: 20px;
+    border: 3px solid #95e1d3;
+    float: left;
+    position: relative;
+    width: 110px;
+    margin-top: 5px;
+
+}
+.work .slider figure img{
+    width: 115px;
+    padding: 0px;
+    padding-left: 10px;
+    border: none;
+}
+
+.slider a {
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    transition: all 0.5s;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.slider a img{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.slider a#nor,.slider a#nor2{
+    left:15%;
+}
+.slider a#rev,.slider a#rev2{
+    left: 85%;
+}
+.services .who_are_we div.article_employee{
+    width: auto;
+    margin: 0px;
+    margin-top: 80px;
+}
+.services .who_are_we div.article_employee figure{
+    display: inline-block;
+    margin: 15px;
+}
+.services .who_are_we div.article_employee figure div{
+    margin: 0px;
+    background-color: #95e1d3;
+    position: relative;
+    height: 380px;
+    width: 300px;
+
+}
+.services .who_are_we div.article_employee figure p{
+    margin: auto;
+    display: block;
+}
+.services .who_are_we div.article_employee figure div div.img_wrapper{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: all 0.3s ease-out;
+}
+.services .who_are_we div.article_employee figure div div.img_wrapper:hover{
+    bottom: 10px;
+    left: -10px;
+}
+.services .who_are_we div.article_employee figure div div.designer{
+    background: url("../img/designer.jpg") no-repeat;
+    background-size:cover ;
+}
+.services .who_are_we div.article_employee figure div div.photog{
+    background: url("../img/fotographer.jpg") no-repeat;
+    background-size:cover ;
+}
+.services .who_are_we div.article_employee figure div div.develop{
+    background: url("../img/developer.jpg") no-repeat;
+    background-size:cover ;
+}
+.services .who_are_we div.article_employee figure div div.opacity{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: transparent;
+}
+.services .who_are_we div.article_employee figure div div.opacity div.icons{
+    width: 240px;
+    height: auto;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: none;
+    word-spacing: -3px;
+    visibility: hidden;
+}
+.services .who_are_we div.article_employee figure div div.opacity .icons a{
+    width:50px;
+    height: 50px;
+    display: inline-block;
+}
+.services .who_are_we div.article_employee figure div div.opacity .icons a.face{
+    background: url("../img/facebook1.png") no-repeat;
+    background-size: cover;
+}
+.services .who_are_we div.article_employee figure div div.opacity .icons a.twit{
+    background: url("../img/twitter.png") no-repeat;
+    background-size: cover;
+}
+.services .who_are_we div.article_employee figure div div.opacity .icons a.pit{
+    background: url("../img/pinterest_before.png") no-repeat;
+    background-size: cover;
+}
+.services .who_are_we div.article_employee figure div div.opacity .icons a.inst{
+    background: url("../img/instagram_before.png") no-repeat;
+    background-size: cover;
+}
+.services .who_are_we div.article_employee figure div div.opacity .icons a.face:hover{
+    background: url("../img/facebook.jpg") no-repeat;
+    background-size: cover;
+}
+.services .who_are_we div.article_employee figure div div.opacity .icons a.twit:hover{
+    background: url("../img/twitter_after.png") no-repeat;
+    background-size: cover;
+}
+.services .who_are_we div.article_employee figure div div.opacity .icons a.pit:hover{
+    background: url("../img/pinterest_after.png") no-repeat;
+    background-size: cover;
+}
+.services .who_are_we div.article_employee figure div div.opacity .icons a.inst:hover{
+    background: url("../img/instagram_after.png") no-repeat;
+    background-size: cover;
+}
+.services .who_are_we div.article_employee figure div div.opacity:hover{
+    background: linear-gradient(to top,rgba(240,216,137,.8),rgba(238,136,137,.9));
+}
+.services .who_are_we div.article_employee figure div div.opacity:hover div.icons{
+    visibility: visible;
+}
+.services .who_are_we div.article_employee figure p{
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+.services .who_are_we div.article_employee figure span {
+    font-size: 15px;
+    font-family: "Roboto";
+    color: rgb(153, 153, 153);
+    font-style: italic;
+    line-height: 1.6;
+}
+.services img.logos{
+    margin-top: 80px;
+    margin-bottom: 80px;
+    width: 1000px;
+}
+.work{
+    text-align: center;
+}
+.work article{
+    margin-top: 80px;
+    word-spacing: -4px;
+    margin-bottom: 80px;
+}
+.work article figure{
+    margin: 0px;
+    width: 25%;
+    display: inline-block;
+}
+.work article figure img{
+    display: block;
+    width: 100%;
+}
+.work .happy_clients{
+    margin-top: 80px;
+    background: url("../img/happy_cl_back.jpg") no-repeat;
+    background-size: cover;
+}
+.work .clients {
+    width: 1100px;
+    margin: auto;
+    margin-top: 150px;
+    padding-bottom: 100px;
+}
+.work .clients div{
+    width: 100%;
+}
+.work .clients div figure{
+    text-align: left;
+    margin: 0px;
+    display: inline-block;
+    width: 540px;
+}
+.work .clients div figure img{
+    float: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius:50px;
+}
+.work .clients div figure p.name{
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+.work .clients div figure p.ocup{
+    font-size: 15px;
+    font-family: "Roboto";
+    color: rgb(51, 51, 51);
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    position: relative;
+}
+.work .clients div figure p.ocup:after{
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 150px;
+    width: 50px;
+    height: 3px;
+    background: red;
+}
+.work .clients div figure p.text{
+    font-size: 15px;
+    font-family: "Roboto";
+    color: rgb(153, 153, 153);
+    line-height: 1.6;
+    padding-left: 150px;
+}
+.blog article{
+    text-align: center;margin-top: 120px;
+}
+.blog figure{
+    display: inline-block;
+    margin: 10px;
+    text-align: left;
+}
+.blog figure p.name{
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-top: 20px;
+}
+.blog figure p.text {
+    font-size: 15px;
+    font-family: "Roboto";
+    color: rgb(153, 153, 153);
+    line-height: 1.6;
+    border-bottom:1px solid #e5e5e5 ;
+    padding-bottom: 10px;
+}
+.blog figure p.statistics{
+    font-size: 15px;
+    font-family: "Roboto";
+    color: rgb(153, 153, 153);
+    font-style: italic;
+    line-height: 1.6;
+    word-spacing: 20px;
+}
+.blog figure p.statistics img{
+    margin-right: 5px;
+}
+.blog figure p.statistics img.sp{
+   vertical-align:text-top;
+    margin-left: 30px;
+}
+.blog figure div div.with_img{
+    width:100%;
+    height:240px;
+    background-size: cover;
+    position: relative;
+}
+
+.blog figure div div.with_img p{
+    position: absolute;
+    padding: 15px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    bottom: -5px;
+    left: -12px;
+    background: #95e1d3;
+    color: white;
+}
+.blog figure div div.with_img p span{
+    display: block;
+}
+.blog figure div div.with_img p span.num{
+    font-family: Montserrat-Bold;
+    font-size: 30px;
+    font-weight: bold;
+ }
+.blog figure div div.with_img p span.tex{
+    font-family: 'Roboto-LightItalic';
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+}
+.blog figure div {
+    width: 380px;
+}
+.blog figure div div.girl{
+    background: url("../img/blog_girl.jpg")  no-repeat;
+}
+.blog figure div div.lep{
+    background: url("../img/blog_leptop.jpg")  no-repeat;
+}
+.blog figure div div.boy{
+    background: url("../img/blog_men.jpg")  no-repeat;
+}
+#map{
+    margin-top:80px;
+    margin-bottom:80px;
+    width: 100%;
+    height: 200px;
+    background-color:grey;
+}
+.map{
+    position: relative;
+    z-index: 1;
+    cursor: default;
+}
+.map .open_map{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    background: url("../img/map_bag.jpg");
+    top:0px;
+    cursor: pointer;
+    /*display: none;*/
+}
+.map .open_map p.close_map{
+    display: none;
+}
+.map .active {
+    width: auto;
+    height: auto;
+    background: transparent;
+    right: 0px;
+}
+.map .active div{
+    display: none;
+}
+.map .active p.close_map {
+    display: block;
+    padding: 10px;
+    margin: 0px;
+    color: rgb(243, 129, 129);font-size: 16px;
+    font-family: "Montserrat-Bold";
+    text-align: center;
+    right: 0px;
+
+}
+.map .active p.close_map:hover{
+    color: red;
+}
+.map .open_map div.open_map_wrapper{
+    position: absolute;
+    height: 120px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+.map .open_map div div{
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    background: url("../img/marker.png") no-repeat;
+    background-position:center ;
+}
+.map .open_map div p{
+    font-size: 24px;
+    font-family: "Montserrat-Bold";
+    color: rgb(243, 129, 129);
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin: 0px;
+    margin-top: 10px;
+}
+.map .open_map div p{
+    font-size: 24px;
+    font-family: "Montserrat-Bold";
+    color: rgb(243, 129, 129);
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin: 0px;
+    margin-top: 10px;
+    position: relative;
+}
+.map .open_map:hover{
+    cursor: default;
+}
+.map .open_map div p:before{
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 35px;
+    width: 60px;
+    height: 3px;
+    background:rgb(243, 129, 129);;
+}
+.map .open_map:hover .open_map_wrapper p{
+    color: red;
+}
+.map .open_map:hover .open_map_wrapper p:before{
+    background: red;
+}
+.map .open_map:hover .open_map_wrapper div{
+    background:url("../img/marker_2.png") no-repeat;
+    background-position:center ;
+}
+.contacts {
+    margin: auto;
+    margin-bottom: 100px;
+    width: 1200px;
+    text-align: center;
+}
+.contacts div.art{
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+.contacts div.mogo{
+    width: 500px;
+}
+
+.contacts div.mogo h1{
+    font-size: 40px;
+    font-family: "Montserrat-Bold";
+    color: rgb(204, 204, 204);
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+.contacts div.mogo p.text{
+    font-size: 15px;
+    font-family: "Roboto";
+    color: rgb(153, 153, 153);
+    line-height: 1.6;
+}
+.contacts div.mogo p.count{
+    font-size: 18px;
+    font-family: "Roboto";
+    color: rgb(51, 51, 51);
+    line-height: 1.2;
+    border-bottom: 1px solid #e5e5e5;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.contacts div.mogo p.count span{
+    font-family: Roboto-Bold;
+    font-size: 20px;
+}
+.contacts div.mogo p.links{
+    font-size: 15px;
+    font-family: "Roboto";
+    color: rgb(153, 153, 153);
+    font-style: italic;
+    margin-bottom:20px;
+    margin-top: 10px;
+}
+.contacts div.mogo p.links a:first-child{
+    margin-left: 30px;
+}
+.contacts div.mogo p.links a{
+    vertical-align: bottom;
+    display:inline-block;
+    width: 20px;
+    height: 20px;
+}
+.contacts div.mogo p.links a.face{
+    background: url("../img/facebook.png") no-repeat;
+    background-position: center;
+}
+.contacts div.mogo p.links a.twit{
+    background: url("../img/twitter_link.png") no-repeat;
+    background-position: center;
+}
+.contacts div.mogo p.links a.inst{
+    background: url("../img/instagram_link.png") no-repeat;
+    background-position: center;
+}
+.contacts div.mogo p.links a.pint{
+    background: url("../img/pinterest_limk.png") no-repeat;
+    background-position: center;
+}
+.contacts div.mogo p.links a.you{
+    background: url("../img/youtube_link.png") no-repeat;
+    background-position: center;
+}
+.contacts div.mogo p.links a.goog{
+    background: url("../img/google plus_link.png") no-repeat;
+    background-position: center;
+}
+.contacts div.mogo p.links a.drib{
+    background: url("../img/dribbble_link.png") no-repeat;
+    background-position: center;
+}
+.contacts div.mogo p.links a.timblr{
+    background: url("../img/tumblr_link.png") no-repeat;
+    background-position: center;
+}
+.contacts div.mogo input[type=email]{
+    width:250px;
+    padding: 10px;
+    text-indent: 10px;
+    font-size: 15px;
+    font-family: "Roboto";
+    color: #999999;
+    outline: none;
+    border: 1px solid #e5e5e5;
+    border-right: none;
+}
+.contacts div.mogo input[type=email]::-webkit-input-placeholder{
+    font-size: 15px;
+    font-family: "Roboto-LightItalic";
+    color: rgb(204, 204, 204);
+    font-style: italic;
+    line-height: 1.6;
+    -webkit-appearance: none;
+}
+.contacts div.mogo input[type=submit]{
+    -webkit-appearance: none;
+    padding: 13px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 14px;
+    -webkit-appearance: none;
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+    outline: none;
+    background-color: #95e1d3;
+    border: none;
+    cursor: pointer;
+}
+.contacts div.blogs{
+    width:350px;
+    margin-left: 20px;
+}
+.contacts div.blogs figure p{
+    padding-left: 140px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+    padding-top: 10px;
+    font-size: 12px;
+    font-family: "Montserrat";
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+.contacts div.blogs figure span{
+    padding-left: 20px;
+    font-size: 13px;
+    font-family: "Roboto";
+    color: rgb(153, 153, 153);
+    font-style: italic;
+    line-height: 1.846;
+}
+.contacts div.blogs figure{
+    margin: 0px;
+    width: 100%;
+    height: 80px;
+    margin-top: 45px;
+}
+.contacts div.blogs figure:hover{
+    cursor: pointer;
+}
+.contacts div.blogs figure:hover  p{
+    text-decoration: underline;
+}
+.contacts div.blogs figure:nth-child(2){
+    margin-top: 30px;
+}
+.contacts div.blogs figure img{
+    float: left;
+}
+.contacts div.instagram{
+    width: 280px;
+    margin-left: 30px;
+}
+.contacts div.instagram div{
+    width: 100%;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+}
+.contacts div .instagram img{
+    margin: auto;
+}
+.contacts div.instagram p{
+    font-size: 13px;
+    font-family: "Roboto";
+    color: rgb(51, 51, 51);
+    font-style: italic;
+    line-height: 1.846;
+    cursor: pointer;
+}
+.contacts div.instagram p:hover{
+    color: #95e1d3;
+}
+.cont_wrap{
+    position: relative;
+}
+#contacts{
+    position: absolute;
+    top:-300px;
+}
+h1.bl_inst{
+   margin-top: 10px;
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 0px;
+
+}
+footer{
+    font-size: 14px;
+    font-family: "Montserrat";
+    color: rgb(51, 51, 51);
+    line-height: 1.2;
+    text-align: center;
+    border-top: 1px solid #e5e5e5;
+    padding: 30px;
+}
+footer span {
+    color: rgb(243, 129, 129);
+}
+@media screen and (max-width:1200px) {
+    .home_page ul.floor li {
+        font-size: 18px;
+        padding-top:15px;
+        width: 180px;
+        padding-bottom: 15px;
+    }
+    .about_us ul{
+        margin-top:60px;
+        margin-bottom: 60px;
+        word-spacing: 40px;
+        padding: 0px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .about_us ul li {
+        font-size: 54px;
+        line-height: 30px;
+    }
+    .about_us ul li span{
+        font-size: 12px;
+    }
+    .services article{
+        width: 800px;
+    }
+    .services .article_with_information div.article{
+        width: 800px;
+    }
+    .services .article_with_information img.boy{
+        width: 380px;
+    }
+    .services .article_with_information aside{
+        width: 48%;
+    }
+    .services .article_with_information .article aside p{
+        width: 106.5%;
+        padding-bottom: 12px;
+    }
+    .slider figure{
+        width: 660px;
+        height:114px;
+    }
+    .slider figure p {
+        font-size: 16px;
+        width: 500px;
+    }
+    .slider figure p.jon {
+        font-size: 16px;
+        margin-top: 5px;
+    }
+
+    .work .slider figure img{
+        width: 100px;
+        padding-left: 20px;
+    }
+    .slider a#nor, .slider a#nor2{
+        left:10%;
+    }
+    .slider a#rev, .slider a#rev2{
+        left: 90%;
+    }
+    .services img.logos{
+        width: 800px;
+    }
+    .work .happy_clients{
+    }
+    .work .clients {
+        width: 80%;
+        margin: auto;
+        margin-top: 100px;
+        padding-bottom: 80px;
+    }
+    .work .clients div figure{
+        width: 48%;
+    }
+    .work .clients div figure img{
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 90px;
+    }
+    .work .clients div figure p.name{
+        font-size: 13px;
+    }
+    .work .clients div figure p.ocup{
+        font-size: 13px;
+    }
+    .work .clients div figure p.ocup:after{
+        left: 115px;
+    }
+    .work .clients div figure p.text{
+        font-size: 13px;
+        padding-left: 115px;
+    }
+    .contacts {
+        margin: auto;
+        margin-bottom: 100px;
+        width: 850px;
+        text-align: center;
+    }
+    .contacts div.mogo{
+        margin-bottom: 100px;
+    }
+    .contacts div.instagram{
+        margin-left: 100px;
+    }
+}
+@media screen and (max-width:880px) {
+    header.active input{
+        display: none;
+    }
+    input.search{
+        display: none;
+    }
+    header ul{
+      display: none;
+    }
+    header.active{
+        background-color: rgba(0,0,0,.7);
+    }
+    header.active ul.mob{
+        padding: 0px;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        line-height: 50px;
+    }
+    header.active ul.mob li{
+        display: block;
+    }
+    header.active ul.mob li a{
+        font-size: 20px;
+        border: none;
+    }
+    header button {
+        display: block;
+    }
+    .home_page ul.floor{
+        padding-left:60px;
+        padding-right: 60px;
+    }
+    .home_page ul.floor li{
+        font-size: 20px;
+        padding-top:20px;
+        width: 240px;
+        padding-bottom: 20px;
+    }
+    .home_page ul.floor li:after{
+        width: 70px;
+    }
+    .home_page div{
+        margin-top: 100px;
+        text-align: center;
+        line-height:1;
+        margin-bottom: 100px;
+    }
+    .home_page div h1{
+        font-size: 90px;
+    }
+    .home_page div h2{
+        font-size: 40px;
+        font-family: 'Kaushan Script', cursive;
+        color: white;
+        margin-bottom: 30px;
+    }
+    .home_page div button{
+        margin-top: 100px;
+    }
+    .about_us ul{
+        margin-top:40px;
+        margin-bottom: 40px;
+        word-spacing: 20px;
+        padding: 0px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .about_us ul li {
+        font-size: 36px;
+        line-height: 20px;
+    }
+    .about_us ul li span{
+        font-size: 9px;
+    }
+    .services article{
+        padding-left: 40px;
+        padding-right: 40px;
+
+    }
+    .services article{
+        width: 60%;
+    }
+    .services article figure{
+        width: 100%;
+    }
+    .services .iphone_ipad{
+        background-size:cover ;
+    }
+    .services .iphone_ipad img{
+        width: 500px;
+        margin-bottom: -55px;
+    }
+    .services .article_with_information div.article{
+        width: 400px;
+        text-align: center;
+    }
+    .services .article_with_information img.boy{
+        width: 400px;
+        margin-bottom: 40px;
+    }
+    .services .article_with_information div.article aside{
+        padding: 0px;
+        width: 400px;
+    }
+    .services .article_with_information .article aside p{
+        width: 105.5%;
+        padding-bottom: 12px;
+    }
+    .slider{
+
+        width: 100%;
+        height: 150px;
+    }
+    .slider figure{
+        width: 400px;
+        height:150px;
+    }
+    .slider figure p {
+        font-size: 16px;
+        width: 310px;
+        margin-left: 130px;
+    }
+    .slider figure p.jon {
+        font-size: 16px;
+        margin-top: 5px;
+    }
+
+    .work .slider figure img{
+        width: 80px;
+        padding-left: 20px;
+    }
+    .slider a#nor,.slider a#nor2{
+        left:10%;
+    }
+    .slider a#rev, .slider a#rev2{
+        left: 95%;
+    }
+    .work article{
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    .work .clients {
+        width: 100%;
+        margin: auto;
+        margin-top: 100px;
+        padding-bottom: 80px;
+    }
+    .work .clients div figure{
+        text-align: left;
+        display: block;
+        width: 70%;
+        margin: auto;
+    }
+    .work .clients div figure img{
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 110px;
+    }
+    .work .clients div figure p.name{
+        font-size: 14px;
+    }
+    .work .clients div figure p.ocup{
+        font-size: 14px;
+    }
+    .work .clients div figure p.ocup:after{
+        left: 150px;
+    }
+    .work .clients div figure p.text{
+        font-size: 14px;
+        padding-left: 150px;
+    }
+    .contacts {
+        margin: auto;
+        margin-bottom: 100px;
+        width: 550px;
+        text-align: center;
+    }
+    .contacts div.mogo{
+        margin-bottom: 100px;
+    }
+
+    .contacts div.instagram{
+        margin: auto;
+        margin-top: 80px;
+    }
+    .to_up{
+        width: 30px;
+        height: 100%;
+    }
+    .to_up a{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .to_up img{
+        margin: 0px;
+    }
+    .to_up span{
+        display: none;
+    }
+}
+@media screen and (max-width:570px) {
+    header h1{
+        padding-left: 40px;
+    }
+    .home_page div{
+        margin-top: 50px;
+
+    }
+    .home_page div h2{
+        font-size: 30px;
+        font-family: 'Kaushan Script', cursive;
+        color: white;
+        margin-bottom: 30px;
+    }
+    .home_page div h1{
+        font-size:50px;
+    }
+    .home_page ul.floor{
+        padding-left: 40px;
+    }
+    .about_us ul li {
+        font-size: 30px;
+        line-height: 20px;
+        word-spacing: 5px;
+    }
+    .about_us ul li span{
+        font-size: 8px;
+        word-spacing: 2px;
+    }
+    .services article{
+        margin-top: 50px;
+        width: 80%;
+    }
+    .services article div:first-child{
+        padding-bottom: 0px;
+    }
+    .services .iphone_ipad img{
+        width: 300px;
+        margin-bottom: -35px;
+    }
+    .services .article_with_information div.article{
+        margin-top: 40px;
+        width: 300px;
+        text-align: center;
+    }
+    .services .article_with_information img.boy{
+        width: 300px;
+        margin-bottom: 20px;
+    }
+    .services .article_with_information div.article aside{
+        padding: 0px;
+        width: 300px;
+    }
+    .services .article_with_information .article aside p{
+        width: 107.5%;
+        padding-bottom: 12px;
+    }
+    .slider figure{
+        width: 320px;
+        height:134px;
+    }
+    .slider figure img {
+        display: none;
+    }
+    .slider figure p {
+       margin: auto;
+        font-size: 12px;
+        width: 240px;
+    }
+    .slider figure p.jon {
+        font-size: 14px;
+        margin-top: 5px;
+        margin-left: 110px;
+    }
+    .slider a#nor,.slider a#nor2{
+        left:10%;
+    }
+    .slider a#rev,.slider a#rev2{
+        left: 90%;
+    }
+
+    .services img.logos{
+        width: 80%;
+    }
+    .work article{
+        margin-top: 30px;
+        margin-bottom: 60px;
+    }
+    .work .happy_clients{
+        margin-top: 60px;
+    }
+    .work .clients {
+        width: 100%;
+        margin: auto;
+        margin-top: 100px;
+        padding-bottom: 80px;
+    }
+    .work .clients div figure{
+        text-align: left;
+        display: block;
+        width: 70%;
+        margin: auto;
+        margin-bottom: 15px;
+    }
+    .work .clients div figure img{
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 90px;
+    }
+    .work .clients div figure p.name{
+        font-size: 13px;
+    }
+    .work .clients div figure p.ocup{
+        font-size: 13px;
+    }
+    .work .clients div figure p.ocup:after{
+        left: 110px;
+    }
+    .work .clients div figure p.text{
+        font-size: 13px;
+        padding-left: 110px;
+    }
+    .blog article{
+        text-align: center;margin-top: 120px;
+    }
+    .blog figure div {
+         width: 300px;
+     }
+    .blog figure div div.with_img{
+        width:100%;
+        height:190px;
+        background-size: cover;
+        position: relative;
+    }
+    .blog figure p.name{
+        font-size: 13px;
+    }
+    .blog figure p.text {
+        font-size: 14px;
+    }
+    .blog figure p.statistics{
+        font-size: 14px;
+    }
+    .blog figure p.statistics span{
+        font-size: 13px;
+    }
+    .blog figure p.statistics img{
+        margin-right: 5px;
+    }
+    .blog figure p.statistics img.sp{
+        margin-left: 25px;
+    }
+    .contacts{
+        width: 100%;
+    }
+    .contacts div.mogo{
+        width: 300px;
+    }
+
+    .contacts div.mogo h1{
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    .contacts div.mogo p.text{
+        font-size: 12px;
+    }
+    .contacts div.mogo p.count{
+        font-size: 14px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .contacts div.mogo p.count span{
+        font-size: 17px;
+    }
+    .contacts div.mogo p.links{
+        font-size: 13px;
+        font-family: "Roboto";
+        color: rgb(153, 153, 153);
+        font-style: italic;
+        margin-bottom:20px;
+        margin-top: 10px;
+    }
+    .contacts div.mogo p.links a:first-child{
+        margin-left: 20px;
+    }
+    .contacts div.mogo input[type=email]{
+        width: 48%;
+        font-size: 13px;
+    }
+    .contacts div.mogo input[type=email]::-webkit-input-placeholder{
+        font-size: 13px;
+    }
+    .contacts div.mogo input[type=submit]{
+        font-size: 12px;
+        padding-bottom: 13px;
+    }
+
+}
+@media screen and (max-width:570px) {
+    .about_us ul li {
+        font-size: 52px;
+        line-height: 25px;
+        word-spacing: 20px;
+        width: 40%;
+        margin-bottom: 20px;
+    }
+    .about_us ul li span{
+        font-size: 8px;
+        word-spacing: 5px;
+    }
+    header button.active {
+        transform: none;
+        top: 20px;
+        right: 28px;
+    }
+}
+@media screen and (max-width:350px){
+    header input{
+        right: 10px;
+        width: 100px;
+    }
+    .home_page div{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .about_us div.images div{
+        margin: 8px;
+        width: 240px;
+        height: 160px;
+    }
+    .about_us div.images img:hover{
+        top:-8px;
+        left: -8px;
+    }
+    .about_us ul li {
+        width: 60%;
+    }
+    .about_us ul{
+        padding-bottom: 0px;
+    }
+    .about_us ul:last-child{
+        margin-bottom: 0px;
+    }
+    hgroup h4{
+        font-size: 20px;
+    }
+    hgroup h2{
+        font-size: 26px;
+    }
+    .services .article_with_information div.article{
+        margin-top: 20px;
+        width: 200px;
+    }
+    .services .article_with_information div.article aside p{
+        width: 112%;
+    }
+    .services .article_with_information img.boy{
+        width: 200px;
+        margin-bottom: 20px;
+    }
+    .services .article_with_information div.article aside{
+        padding: 0px;
+        width: 200px;
+    }
+    .services .article_with_information div.article aside p{
+        font-size: 12px;
+    }
+    .slider figure{
+        width: 220px;
+        height:134px;
+    }
+    .slider figure img {
+        display: none;
+    }
+   .slider figure p {
+        font-size: 12px;
+        width: 220px;
+        padding: 5px;
+        margin-left: 5px;
+   }
+    .slider figure p.jon {
+        margin-left: 80px;
+    }
+    .work .clients div figure{
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    .work .clients {
+        width: 100%;
+        margin: auto;
+        margin-top: 100px;
+        padding-bottom: 80px;
+    }
+    .work .clients div figure{
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .work .clients div figure img{
+        float: none;
+    }
+    .work .clients div figure p.name{
+        font-size: 13px;
+    }
+    .work .clients div figure p.ocup{
+        font-size: 13px;
+    }
+    .work .clients div figure p.ocup:after{
+        left: 85px;
+    }
+    .work .clients div figure p.text{
+        padding: 0px;
+    }
+    .blog figure{
+    }
+    .blog figure div {
+        width: 240px;
+    }
+    .blog figure div div.with_img{
+        height:142px;
+    }
+    .blog figure div div.with_img p span.num{
+        font-size: 24px;
+    }
+    .blog figure div div.with_img p{
+
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .blog figure div div.with_img p span.tex{
+        font-size: 12px;
+    }
+    .blog figure p.name{
+        margin-top: 20px;
+        font-size: 13px;
+    }
+    .blog figure p.text {
+        font-size: 14px;
+    }
+    .blog figure p.statistics{
+        font-size: 14px;
+    }
+    .blog figure p.statistics span{
+        font-size: 13px;
+    }
+    .blog figure p.statistics img{
+        margin-right: 5px;
+    }
+    .blog figure p.statistics img.sp{
+        margin-left: 25px;
+    }
+    .contacts div.mogo{
+        width: 260px;
+    }
+
+    .contacts div.mogo h1{
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
+    .contacts div.mogo p.text{
+        font-size: 12px;
+    }
+    .contacts div.mogo p.count{
+        font-size: 14px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .contacts div.mogo p.count span{
+        font-size: 17px;
+    }
+    .contacts div.mogo p.links{
+        font-size: 13px;
+        font-family: "Roboto";
+        color: rgb(153, 153, 153);
+        font-style: italic;
+        margin-bottom:20px;
+        margin-top: 10px;
+    }
+    .contacts div.mogo p.links a{
+        width: 15px;
+        height: 15px;
+
+    }
+    .contacts div.mogo p.links a:first-child{
+        margin-left: 20px;
+    }
+    .contacts div.mogo form{
+        text-align: right;
+    }
+    .contacts div.mogo input[type=email]{
+        width:100%;
+        font-size: 12px;
+        margin-bottom: 10px;
+        border-right:1px solid #e5e5e5;
+    }
+    .contacts div.mogo input[type=email]::-webkit-input-placeholder{
+        font-size: 12px;
+    }
+    .contacts div.mogo input[type=submit]{
+        padding: 12px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom:11px;
+        -webkit-appearance: none;
+        font-size: 12px;
+    }
+    .contacts div.blogs{
+        width:80%;
+        margin-left: 20px;
+    }
+    .contacts div.blogs figure p{
+        padding-left: 90px;
+        margin-bottom: 5px;
+        margin-top: 0px;
+        padding-top: 0px;
+        font-size: 11px;
+        font-family: "Montserrat";
+        color: rgb(51, 51, 51);
+        text-transform: uppercase;
+        line-height: 1.5;
+    }
+    .contacts div.blogs figure span{
+        padding-left: 20px;
+        font-size: 13px;
+        font-family: "Roboto";
+        color: rgb(153, 153, 153);
+        font-style: italic;
+        line-height: 1.846;
+    }
+    .contacts div.blogs figure{
+        margin: 0px;
+        width: 100%;
+        height: 80px;
+        margin-top: 45px;
+    }
+    .contacts div.blogs figure:nth-child(2){
+        margin-top: 30px;
+    }
+    .contacts div.blogs figure img{
+        float: left;
+        width: 80px;
+    }
+
+}
